@@ -12,8 +12,7 @@ For building your docker, set docker parameter to True. If False, it will run pr
 We adapted this template code for our algorithm by following the
 [general tutorial on how to create a grand-challenge algorithm](https://grand-challenge.org/blogs/create-an-algorithm/). 
 
-We also explain this template repository, and how to set up your docker container in [this video](https://www.youtube.com/watch?v=0MpWOGXT8h8).
-Before diving into the details of this template code we recommend readers have the pre-requisites installed and have cloned this repository as described below:
+
 
 ## Prerequisites
 * [Docker](https://www.docker.com/get-started)
