@@ -29,11 +29,6 @@ Also, note that the basic version of WSL 2 does not come with GPU support.
 Please watch the [official tutorial](https://www.youtube.com/watch?v=PdxXlZJiuxA) 
 by Microsoft on installing WSL 2 with GPU support.
 
-Please clone the repository as follows:
-```python
-git clone git@github.com:node21challenge/node21_generation_baseline.git
-```
-
 
 ##### Table of Contents  
 [An overview of the baseline algorithm](#algorithm)  
