@@ -39,7 +39,7 @@ by Microsoft on installing WSL 2 with GPU support.
 <a name="algorithm"/>
 
 ## An overview of the baseline algorithm
-The baseline nodule generation algorithm is based on the [paper](https://geertlitjens.nl/publication/litj-10-a/litj-10-a.pdf) published by Litjens et al.. The main file executed by the docker container is [*process.py*](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py). 
+The baseline nodule generation algorithm is based on the [paper](https://geertlitjens.nl/publication/litj-10-a/litj-10-a.pdf) published by Litjens et al.. The main file executed by the docker container is [*process.py*](https://github.com/FLOURISH123/Node21-generation-Algorithm.git). 
 
 
 ## Input and output interfaces
@@ -78,22 +78,14 @@ An example nodules.json file is as follows:
     "version": { "major": 1, "minor": 0 }
 }
 ```
-The implementation of the algorithm inference in process.py is straightforward (and must be followed by participants creating their own algorithm): 
-load the nodules.json file in the [*__init__*](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py#L25) function of the class, 
-and implement a function called [*predict*](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py#L44) 
-to generate nodules on a given CXR image. 
 
-The function [*predict*](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py#L44) is run by 
-evalutils when the [process](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py#L95) function is called.
 
 To test this container locally without a docker container, you should the **execute_in_docker** flag to 
 False - this sets all paths to relative paths. You should set it back to **True** when you want to switch back to the docker container setting.
 
 ### Operating on a 3D image
-For the sake of time efficiency in the evaluation process of [NODE21](https://node21.grand-challenge.org/), 
-the submitted algorithms to [NODE21](https://node21.grand-challenge.org/) are expected to operate on a 3D image which consists of multiple CXR images 
-stacked together. The algorithm should go through the slices (CXR images) one by one and process them individually, 
-as shown in [*predict*](https://github.com/node21challenge/node21_generation_baseline/blob/main/process.py#L44). 
+ The algorithm should go through the slices (CXR images) one by one and process them individually, 
+as shown in [*predict*](https://github.com/FLOURISH123/Node21-generation-Algorithm.git). 
 When outputting results, the third coordinate of the bounding box in nodules.json file is used to identify the CXR from the stack. 
 If the algorithm processes the first CXR image in 3D volume, the z coordinate output should be 0, if it processes the third CXR image, it should be 2, etc. 
 
