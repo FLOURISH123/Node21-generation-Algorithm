@@ -7,7 +7,5 @@ we used [evalutils](https://github.com/comic/evalutils) which provides methods t
 It automatically generates template scripts for your container files, and creates commands for building, testing, and exporting the algorithm container.
 We adapted this template code for our algorithm by following the
 [general tutorial on how to create a grand-challenge algorithm](https://grand-challenge.org/blogs/create-an-algorithm/). 
-
- You can use this flag to switch between these two modes.
-
+You can use this flag to switch between these two modes.
 For building your docker, set docker parameter to True. If False, it will run process.py locally for test purposes.
